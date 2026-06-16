@@ -338,7 +338,7 @@
             z-index: 100;
             background: rgba(255, 251, 245, 0.8);
             backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: 16px;
             padding: 16px clamp(20px, 5vw, 60px);
             border-bottom: 1px solid rgba(217, 119, 6, 0.08);
             display: flex;
@@ -790,7 +790,7 @@
             <div class="floater"></div>
         </div>
         <div class="hero-content">
-            <span class="hero-badge">🌟 美丽乡村 · 多彩家园</span>
+            <span class="hero-badge">🌟 美丽乡村 · 多彩平沙村</span>
             <h1>用镜头记录<span class="accent">多彩乡村</span></h1>
             <p class="hero-subtitle">
                 穿梭于田园阡陌之间，捕捉乡土中国的每一抹动人色彩。
@@ -853,8 +853,8 @@
     <!-- ==================== 页脚 ==================== -->
     <footer class="footer" id="about">
         <div class="footer-decor">🏡 🌾 🌻 🏔️ 🌿</div>
-        <p>© 2024 <strong>多彩乡村</strong> · 用影像记录美丽乡村</p>
-        <p style="font-size:0.8rem;opacity:0.7;">宣传照片展示平台</p>
+        <p>© 2026 <strong>多彩乡村</strong> · 广应科平沙筑梦团</p>
+        <p style="font-size:0.8rem;opacity:0.7;">平沙村宣传照片展示平台</p>
     </footer>
 
     <script>
@@ -862,146 +862,121 @@
             // ============================================================
             //  📸  照片数据接口 — 在这里修改或替换照片数据
             // ============================================================
-            //  使用方式：
-            //    1. 直接修改下方 PHOTO_DATA 数组
-            //    2. 或者实现 fetchPhotosFromAPI() 函数从后端获取数据
-            //    3. 每张照片需包含以下字段：
-            //       - id:       唯一标识
-            //       - src:      图片URL（高清大图）
-            //       - thumbnail: 缩略图URL（可选，不填则使用src）
-            //       - title:    照片标题
-            //       - description: 照片描述
-            //       - category: 分类 (scenery|architecture|culture|nature|food|craft)
-            //       - date:     拍摄日期（可选）
-            // ============================================================
-
             const PHOTO_DATA = [
                 {
                     id: 1,
-                    src: 'https://picsum.photos/seed/village1/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village1/600/450',
-                    title: '金色稻田',
-                    description: '秋收时节，金灿灿的稻穗在阳光下闪耀，描绘出一幅丰收的田园画卷。',
-                    category: 'scenery',
-                    date: '2024-10-15'
+                    src: './photoes/1.jpg',
+                    thumbnail: './photoes/1.jpg',
+                    title: '古村临街老宅',
+                    description: '充满年代感的岭南老式民居，灯笼点缀街巷，留存乡村旧日烟火气息。',
+                    category: 'architecture',
+                    date: '2026-06-10'
                 },
                 {
                     id: 2,
-                    src: 'https://picsum.photos/seed/village2/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village2/600/450',
-                    title: '徽派老宅',
-                    description: '白墙黛瓦马头墙，百年徽派建筑静静诉说着岁月的故事。',
-                    category: 'architecture',
-                    date: '2024-09-20'
+                    src: './photoes/2.jpg',
+                    thumbnail: './photoes/2.jpg',
+                    title: '田园水渠稻田',
+                    description: '平整稻田搭配乡村灌溉水渠，蓝天白云映衬出清新治愈的田园风光。',
+                    category: 'scenery',
+                    date: '2026-06-10'
                 },
                 {
                     id: 3,
-                    src: 'https://picsum.photos/seed/village3/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village3/600/450',
-                    title: '端午龙舟',
-                    description: '热闹的端午龙舟赛，鼓声震天，桨影翻飞，传承千年的民俗盛典。',
-                    category: 'culture',
-                    date: '2024-06-10'
+                    src: './photoes/3.jpg',
+                    thumbnail: './photoes/3.jpg',
+                    title: '乡村河道街巷',
+                    description: '村内河道贯穿民居，两岸整齐房屋，展现水乡乡村整洁宜居风貌。',
+                    category: 'scenery',
+                    date: '2026-06-10'
                 },
                 {
                     id: 4,
-                    src: 'https://picsum.photos/seed/village4/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village4/600/450',
-                    title: '山间清溪',
-                    description: '清澈的山涧溪流穿过村庄，两岸绿树成荫，生态环境优美宜人。',
-                    category: 'nature',
-                    date: '2024-08-05'
+                    src: './photoes/4.jpg',
+                    thumbnail: './photoes/4.jpg',
+                    title: '乡村入口标识',
+                    description: '村口道路标识牌，是村落对外展示形象的第一道风景。',
+                    category: 'culture',
+                    date: '2026-06-10'
                 },
                 {
                     id: 5,
-                    src: 'https://picsum.photos/seed/village5/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village5/600/450',
-                    title: '农家土灶饭',
-                    description: '地道的农家土灶烧饭，柴火慢炖，飘散着最朴实的乡愁味道。',
-                    category: 'food',
-                    date: '2024-07-22'
+                    src: './photoes/5.jpg',
+                    thumbnail: './photoes/5.jpg',
+                    title: '宽阔江景河岸',
+                    description: '江边开阔水域，水面平静，展现乡村临水而居的自然生态环境。',
+                    category: 'nature',
+                    date: '2026-06-10'
                 },
                 {
                     id: 6,
-                    src: 'https://picsum.photos/seed/village6/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village6/600/450',
-                    title: '竹编工艺',
-                    description: '老手艺人灵巧地编织竹篮，这项传统手工技艺承载着乡村的智慧与美学。',
-                    category: 'craft',
-                    date: '2024-11-01'
+                    src: './photoes/6.jpg',
+                    thumbnail: './photoes/6.jpg',
+                    title: '村内老街民居',
+                    description: '乡村老街两侧老式楼房，绿树掩映，保留本土居住生活样貌。',
+                    category: 'architecture',
+                    date: '2026-06-10'
                 },
                 {
                     id: 7,
-                    src: 'https://picsum.photos/seed/village7/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village7/600/450',
-                    title: '晨雾茶园',
-                    description: '清晨薄雾笼罩着层层梯田茶园，宛如人间仙境。',
-                    category: 'scenery',
-                    date: '2024-04-12'
+                    src: './photoes/7.jpg',
+                    thumbnail: './photoes/7.jpg',
+                    title: '远江薄雾水景',
+                    description: '薄雾笼罩江面，水天相接，静谧温柔的江边自然景色。',
+                    category: 'nature',
+                    date: '2026-06-10'
                 },
                 {
                     id: 8,
-                    src: 'https://picsum.photos/seed/village8/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village8/600/450',
-                    title: '客家围屋',
-                    description: '宏伟的客家围龙屋，凝聚着客家人团结互助的精神与建筑智慧。',
-                    category: 'architecture',
-                    date: '2024-03-28'
+                    src: './photoes/8.jpg',
+                    thumbnail: './photoes/8.jpg',
+                    title: '乡村文化活动室',
+                    description: '村内文化宣传空间，布置暖心标语，承载乡村精神文明建设。',
+                    category: 'culture',
+                    date: '2026-06-10'
                 },
                 {
                     id: 9,
-                    src: 'https://picsum.photos/seed/village9/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village9/600/450',
-                    title: '油菜花海',
-                    description: '春天里一望无际的油菜花田，金黄灿烂，吸引无数游客驻足。',
-                    category: 'scenery',
-                    date: '2024-03-15'
+                    src: './photoes/9.jpg',
+                    thumbnail: './photoes/9.jpg',
+                    title: '郊野绿地孤树',
+                    description: '大片平整绿地中独立大树，是村民休闲散步的自然小天地。',
+                    category: 'nature',
+                    date: '2026-06-10'
                 },
                 {
                     id: 10,
-                    src: 'https://picsum.photos/seed/village10/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village10/600/450',
-                    title: '荷塘采莲',
-                    description: '夏日荷塘莲花盛开，村民泛舟采莲，充满诗意的乡村生活。',
-                    category: 'nature',
-                    date: '2024-07-30'
+                    src: './photoes/10.jpg',
+                    thumbnail: './photoes/10.jpg',
+                    title: '岭南特色居民楼',
+                    description: '乡村新式多层民居，外墙充满本土彩绘装饰，独具岭南乡村特色。',
+                    category: 'architecture',
+                    date: '2026-06-10'
                 },
                 {
                     id: 11,
-                    src: 'https://picsum.photos/seed/village11/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village11/600/450',
-                    title: '乡村集市',
-                    description: '热闹的乡村集市上，各种土特产琳琅满目，充满了人间烟火气。',
-                    category: 'culture',
-                    date: '2024-05-18'
+                    src: './photoes/11.jpg',
+                    thumbnail: './photoes/11.jpg',
+                    title: '古巷老榕步道',
+                    description: '百年榕树覆盖古巷道，青砖墙搭配石板路，沉淀乡村百年历史底蕴。',
+                    category: 'architecture',
+                    date: '2026-06-10'
                 },
                 {
                     id: 12,
-                    src: 'https://picsum.photos/seed/village12/1200/900',
-                    thumbnail: 'https://picsum.photos/seed/village12/600/450',
-                    title: '手工豆腐坊',
-                    description: '传统石磨豆腐制作，保留着最纯正的豆香与乡村味道。',
-                    category: 'food',
-                    date: '2024-08-20'
+                    src: './photoes/12.jpg',
+                    thumbnail: './photoes/12.jpg',
+                    title: '江上轮渡风光',
+                    description: '江面轮渡船只往来，水上交通构成独特的乡村滨水风景线。',
+                    category: 'nature',
+                    date: '2026-06-10'
                 },
             ];
 
             // ============================================================
             //  🌐 可选：从API获取照片数据的函数接口
-            //  如果使用后端API，请实现此函数，返回格式与PHOTO_DATA一致
-            //  页面加载时会优先尝试此函数
             // ============================================================
             async function fetchPhotosFromAPI() {
-                // --- 示例：从后端API获取数据 ---
-                // try {
-                //     const response = await fetch('/api/photos');
-                //     const data = await response.json();
-                //     return data.photos; // 返回照片数组
-                // } catch (error) {
-                //     console.warn('API获取失败，将使用本地数据:', error);
-                //     return null;
-                // }
-                // --- 当前：直接返回null，使用本地PHOTO_DATA ---
                 return null;
             }
 
@@ -1025,14 +1000,11 @@
 
             // 初始化
             async function init() {
-                // 尝试从API获取数据
                 const apiData = await fetchPhotosFromAPI();
                 if (apiData && Array.isArray(apiData) && apiData.length > 0) {
                     photos = apiData;
-                    console.log('✅ 已从API加载照片数据，共', photos.length, '张');
                 } else {
                     photos = PHOTO_DATA;
-                    console.log('✅ 已从本地配置加载照片数据，共', photos.length, '张');
                 }
                 updateStats();
                 updateFilterCounts();
@@ -1133,7 +1105,6 @@
                 const photo = filteredPhotos[currentLightboxIndex];
                 const img = document.getElementById('lightboxImg');
                 const caption = document.getElementById('lightboxCaption');
-                // 使用高清大图
                 img.src = photo.src;
                 img.alt = photo.title;
                 const catConfig = categoryConfig[photo.category] || { name: photo.category, emoji: '' };
